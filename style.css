@@ -13,3 +13,45 @@ p.yellow {
 .text-box > p:nth-of-type(3) {
   color: green;
 }
+/* Застосування структурних псевдокласів */
+.day:first-child li {
+  color: blue; /* Перший день - синій */
+}
+.day:last-child li {
+  color: green; /* Останній день - зелений */
+}
+.day:nth-child(odd) li {
+  background-color: lightgray; /* Непарні дні - світло-сірий фон */
+}
+.day:nth-child(even) li {
+  background-color: lightblue; /* Парні дні - світло-синій фон */
+}
+li:first-of-type {
+  font-weight: bold; /* Перший урок у списку - жирний шрифт */
+}
+
+/* Застосування псевдокласів стану */
+li:hover {
+  background-color: yellow; /* Під час наведення курсору - жовтий фон */
+}
+li:active {
+  color: red; /* Під час натискання - червоний колір тексту */
+}
+.day:hover {
+  transform: scale(1.05); /* Під час наведення курсору на день - збільшення */
+}
+.day:target {
+  border: 2px solid gold; /* Виділення цільового дня */
+}
+li:visited {
+  color: purple; /* Відвідані посилання в списку (якщо li містить посилання) */
+}
+
+/* Загальні стилі для списку */
+.day {
+  margin-bottom: 20px;
+}
+li {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
